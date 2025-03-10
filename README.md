@@ -31,11 +31,9 @@ Clean the database
 This repository illustrates how to use jest to write unit tests 
 for a server in typescript. The examples are as follows:
 
-- tests/authorSchema.test.ts: Unit tests to verify the schema of the authors
-colletion. 
-- tests/bookDetailsService.test.ts: Unit tests to verify the behavior of the service 
-that is used to retrieve the details of a particular book.
-- tests/createBookService.test.ts: Unit tests to verify if a book is created successfully.
+- `tests/authorSchema.test.ts`: Unit tests to verify the schema of the authors colletion. 
+- `tests/bookDetailsService.test.ts`: Unit tests to verify the behavior of the service that is used to retrieve the details of a particular book.
+- `tests/createBookService.test.ts`: Unit tests to verify if a book is created successfully.
 
 # For you to do
 
@@ -48,6 +46,12 @@ service responds with an error code of 500. The unit test
 should be placed in `tests/authorService.test.ts`.
 
 ## Part 2
+
+Briefly explain a limitation of the tests in `tests/authorSchema.test.ts` in the space below.
+
+
+
+## Part 3
 
 Generate the coverage report for the tests you wrote. How can you improve
 your tests using the coverage report? Briefly explain your 
