@@ -1,19 +1,10 @@
-import mongoose from "mongoose";
-import Book, { IBook } from "../models/book";
+import Book from "../models/book";
 import app from "../server";
 import request from "supertest";
 import Author from "../models/author";
 import Genre from "../models/genre";
 
 describe("Verify POST /create_book", () => {
-    // let bookSpy: jest.SpyInstance;
-
-    // beforeAll(() => {
-    //     bookSpy = jest.spyOn(Book.prototype, 'saveBookOfExistingAuthorAndGenre');
-    // });
-    // afterAll(() => {
-    //     bookSpy.mockRestore();
-    // });
 
     it("should create a new book for an existing author and genre", async () => {
         const mockReqBody = {
@@ -34,7 +25,11 @@ describe("Verify POST /create_book", () => {
             .post('/newbook')
             .send(mockReqBody);
         expect(response.statusCode).toBe(200);
-        expect(response.body).toHaveProperty('_id');
+        expect(response.body).toHaveProperty('title', expectedBook.title);
+        expect(response.body).toHaveProperty('summary', expectedBook.summary);
+        expect(response.body).toHaveProperty('isbn', expectedBook.isbn);
+        expect(response.body).toHaveProperty('author');
+        expect(response.body).toHaveProperty('genre');
     });
 
     it("should return 500 if book creation fails", async () => {
