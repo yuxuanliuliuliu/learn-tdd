@@ -44,4 +44,6 @@ with a "No authors found" message when there are no authors in the database. If 
 service responds with an error code of 500. The unit test
 should be placed in `tests/authorService.test.ts`.
 
-Generate the coverage report for the tests you wrote. What does the coverage report tell you about your implementation and tests?
+Generate the coverage report for the tests you wrote. How can you improve
+your tests using the coverage report? Briefly explain your 
+process in the space below.
