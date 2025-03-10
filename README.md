@@ -25,6 +25,7 @@ them for manual testing here they are:
 Clean the database
 
 `npx ts-node remove_db.ts "mongodb://127.0.0.1:27017/my_library_db"`
+
 # Description
 
 This repository illustrates how to use jest to write unit tests 
@@ -38,11 +39,15 @@ that is used to retrieve the details of a particular book.
 
 # For you to do
 
+## Part 1
+
 Write a unit test for the GET /authors service. 
 The service should respond with a list of author names and lifetimes sorted by family name of the authors. It should respond
 with a "No authors found" message when there are no authors in the database. If an error occurs when retrieving the authors then the
 service responds with an error code of 500. The unit test
 should be placed in `tests/authorService.test.ts`.
+
+## Part 2
 
 Generate the coverage report for the tests you wrote. How can you improve
 your tests using the coverage report? Briefly explain your 
