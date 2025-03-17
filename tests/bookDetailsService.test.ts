@@ -1,7 +1,7 @@
 import app from "../server";
 import request from "supertest";
 import Book from "../models/book";
-import mongoose from "mongoose";
+import mongoose from "mongoose";    
 import BookInstance from "../models/bookinstance";
 
 describe("Verify GET /book_dtls/:id", () => {
@@ -37,7 +37,7 @@ describe("Verify GET /book_dtls/:id", () => {
                     title: mockBook.title,
                     author: mockBook.author
                 });
-            }
+            }   
             return Promise.resolve(null);
         });
 
